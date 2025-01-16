@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 46</title>
+</head>
+
+<body>
+  <h1>Dropdown List with JavaScript Functions</h1>
+  <p>Select an item from the dropdown list below:</p>
+  <select id="list_items">
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="TamilNadu">TamilNadu</option>
+    <option value="Telagana">Telagana</option>
+    <option value="UP">UP</option>
+  </select>
+  <br><br>
+  <button onclick="countItems()">Count Items</button>
+  <br><br>
+  <p id="para"></p>
+  <label for="deleteInput">Enter the state:
+    <input type="text" id="deleteInput" placeholder="Enter the state to delete">
+  </label>
+  <br><br>
+  <button onclick="deleteItem(document.getElementById('deleteInput').value)">Delete Input</button>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
