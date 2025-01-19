@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .paragraphs {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="paragraphs">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab consequuntur officiis temporibus, magni
+      necessitatibus
+      sint fugiat at dolores quae architecto dolorem nostrum, voluptatem ipsam, earum quibusdam sunt facilis!
+      Asperiores,
+      provident!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio rerum molestiae asperiores cum tempora doloremque
+      magnam itaque vero accusamus libero!</p>
+  </div>
+  <button onclick="changeAlignment('left')">Left</button>
+  <button onclick="changeAlignment('center')">Center</button>
+  <button onclick="changeAlignment('right')"> Right</button>
+
+  <script>
+    function changeAlignment(alignment) {
+      const paragraphs = document.getElementsByTagName('p');
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.textAlign = alignment;
+      }
+    }
+  </script>
+</body>
+
+</html>
