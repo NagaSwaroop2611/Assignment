@@ -2,7 +2,7 @@ let imageOver = document.getElementById("image");
 // console.log(imageOver);
 
 imageOver.addEventListener("mouseover", () => {
-  imageOver.src = "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  imageOver.src = "https://images.pexels.com/photos/30359820/pexels-photo-30359820/free-photo-of-intricate-moorish-archways-in-alhambra-palace-spain.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
   // imageOver.height = "auto";
   // imageOver.width = "auto";
 });
