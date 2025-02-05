@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+  <title>Employee Salary Calculator</title>
+</head>
+
+<body>
+  <script>
+    let Ename = prompt("Enter Employee Name:");
+    let EId = prompt("Enter Employee ID:");
+    let salary = parseFloat(prompt("Enter employee salary:"));
+
+    let ta = 0.15 * salary;
+    let da = .35 * salary;
+
+    let gross_salary = salary + ta + da;
+    document.write("Gross Salary of Employee:" + Math.round(gross_salary));
+  </script>
+</body>
