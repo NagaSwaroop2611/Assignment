@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let time = parseInt(prompt("Enter time in hours (1 to 24):"));
+    let period = prompt("Enter AM or PM:").toUpperCase();
+
+    // Validate inputs
+    if (time < 1 || time > 24 || (period !== "AM" && period !== "PM")) {
+      console.log("Invalid input. Please enter a valid time (1 to 24) and period (AM/PM).");
+    } else {
+      let message;
+
+      // Adjust time for 24-hour format if period is PM
+      if (period === "PM" && time < 12) {
+        time += 12;
+      }
+      else if (period === "AM" && time === 12) {
+        time = 0; // Midnight
+      }
+      if (time >= 1 && time < 12) {
+        message = "Good Morning!";
+      } else if (time >= 12 && time < 16) {
+        message = "Good Afternoon!";
+      } else if (time >= 16 && time < 19) {
+        message = "Good Evening!";
+      } else if (time >= 19 && time <= 24 || time === 0) {
+        message = "Good Night!";
+      } else {
+        message = "Invalid time input.";
+      }
+
+      document.write(message);
+    }
+  </script>
+</body>
+
+</html>
