@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 11</title>
+</head>
+
+<body>
+  <script>
+    // Function to generate the Fizz, Buzz, and FizzBuzz series
+    function fizzBuzzSeries(n) {
+      let result = [];
+
+      for (let i = 1; i <= n; i++) {
+
+        if (i % 3 === 0 && i % 5 === 0) {
+          result.push("FizzBuzz");
+        }
+        else if (i % 3 === 0) {
+          result.push("Fizz");
+        }
+        else if (i % 5 === 0) {
+          result.push("Buzz");
+        }
+        else {
+          result.push(i);
+        }
+      }
+      console.log(result.join(", "));
+      document.write(result.join(", "));
+    }
+
+    let n = parseInt(prompt("Enter a positive integer number"));
+    fizzBuzzSeries(n);
+  </script>
+</body>
+
+</html>
