@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function series(n) {
+      let sum1 = 0;
+      let sum2 = 0
+      if (n < 0) {
+        document.write(`Enter a valid number`)
+      }
+      for (let i = 1; i <= n; i++) {
+        sum1 = sum1 + 1 / i;
+        sum2 = sum2 + i * 2;
+      }
+      document.write(`a) ${sum1.toFixed(2)}</br>b) ${sum2} `);
+    }
+
+    let n = parseInt(prompt("Enter a number:"));
+    series(n);
+  </script>
+</body>
+
+</html>
