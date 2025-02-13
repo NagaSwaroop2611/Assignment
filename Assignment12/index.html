@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function nimGame(stones) {
+      console.log(`Game starts with ${stones} stones.`);
+
+      while (stones > 0) {
+        let myMove;
+
+        if (stones % 4 === 0) {
+          // Losing position: Pick 1 stone to prolong the game
+          myMove = 1;
+        } else {
+          // Optimal move: Leave a multiple of 4 for the opponent
+          myMove = stones % 4;
+        }
+
+        stones -= myMove;
+        console.log(`You removed ${myMove} stone(s). Stones left: ${stones}`);
+
+        if (stones === 0) {
+          console.log("You win!");
+          return;
+        }
+
+        // Opponent's move (optimal strategy)
+        let opponentMove = (stones % 4 === 0) ? 1 : stones % 4;
+        stones -= opponentMove;
+        console.log(`Opponent removed ${opponentMove} stone(s). Stones left: ${stones}`);
+
+        if (stones === 0) {
+          console.log("Opponent wins!");
+          return;
+        }
+      }
+    }
+
+    let stones = +prompt("Enter number of stones:");
+    nimGame(stones)
+
+  </script>
+</body>
+
+</html>
