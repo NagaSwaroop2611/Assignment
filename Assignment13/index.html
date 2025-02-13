@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function check(directions) {
+      let x = 0, y = 0;
+      for (dir of directions) {
+        switch (dir) {
+          case "U":
+            x = x + 1;
+            break;
+          case "D":
+            x = x - 1;
+            break;
+          case "L":
+            y = y + 1;
+            break;
+          case "R":
+            y = y - 1;
+            break;
+          default:
+            document.write("Enter valid directions");
+        }
+      }
+      document.write(`"${directions}":`);
+      if (x == 0 && y == 0) {
+        document.write(true, "</br>");
+      }
+      else {
+        document.write(false, "</br>");
+      }
+    }
+
+    check("UD");
+    check("LL");
+    check("LRRL");
+    check("LLUD");
+  </script>
+</body>
+
+</html>
