@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Light background for contrast */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fbe6be; /* Light beige background for navbar */
+  padding:10px 15px ;
+  
+}
+
+.navbar li {
+  list-style: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+
+.navbar li:hover {
+  background-color: rgb(157, 4, 4); /* Red background on hover */
+  color: red; /* White text on hover */
+  transition: all 1s ease-in;
+}
