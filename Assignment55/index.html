@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Ticket Booking</title>
+</head>
+
+<body>
+  <div>
+    <h1 style="text-align: center;">Buy Tickets to the Web Developers Gala</h1>
+    <h3>Ticket are $10each. Dinner Packages are extra $5.All fields are required</h3>
+  </div>
+  <fieldset class="fieldset1">
+    <legend>Ticket and Add-ons</legend>
+    <label for="tickets">Number of Tickets <span>Limit 8</span>
+      <input type="number" id="tickets" max="8">
+    </label>
+    <label for="dinner">Dinner Packages <span>Serve 2</span>
+      <input type="number">
+    </label>
+  </fieldset>
+  <fieldset class="fieldset2">
+    <legend>Payment</legend>
+    <label for="credit">Credit Card Number <span>No spaces or dashes please</span>
+      <input type="number" id="credit" placeholder="3270000000008">
+    </label>
+    <label for="date">Expiration Date <span>MM/YYYY</span>
+      <input type="text" pattern="(0[1-9]|1[0-2])\/[0-9]{4}" placeholder="01/2018">
+    </label>
+  </fieldset>
+  <fieldset class="fieldset3">
+    <legend>Billing Address</legend>
+    <label for="name">Name <br>
+      <input type="text" id="name" placeholder="ex John Q. Public">
+    </label>
+
+    <label for="address">Street Address <br>
+      <input type="text" id="address" placeholder="wx. 12345 Main Street, Apt 23">
+    </label>
+
+    <label for="city">City <br>
+      <input type="text" id="city" placeholder="ex. AnyTown">
+    </label>
+
+    <label for="state">State <br>
+      <input type="text" id="state" placeholder="CA">
+    </label>
+
+    <label for="pin">Pincode <br>
+      <input type="number" id="pin" maxlength="6" placeholder="123456">
+    </label>
+
+  </fieldset>
+  <button>Buy Tickets</button>
+</body>
+
+</html>
