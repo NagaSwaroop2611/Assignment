@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    const armstrong = function (n) {
+      let sum = 0;
+      let temp = n;
+      while (temp != 0) {
+        let n1 = temp % 10;
+        sum = sum + n1 ** 3;
+        temp = Math.floor(temp / 10);
+      }
+      // console.log(typeof sum,typeof n);
+      if (sum === n) {
+        return true;
+      }
+      else false;
+    }
+    let result = []
+    for (let i = 100; i <= 999; i++) {
+      if (armstrong(i)) {
+        result.push(i);
+      }
+    }
+
+    document.write(result.join(','));
+  </script>
+</body>
+
+</html>
