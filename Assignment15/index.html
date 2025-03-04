@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function swap(num1, num2) {
+      num1 = num1 + num2;
+      num2 = num1 - num2;
+      num1 = num1 - num2;
+      document.write("After Swapping <br>")
+      document.write(`num1:${num1}<br>num2:${num2}`);
+    }
+
+    let num1 = parseInt(prompt("Enter a number1:"));
+    let num2 = parseInt(prompt("Enter a number2:"));
+    document.write("before swapping:<br>");
+    document.write(`num1:${num1}<br>num2:${num2}<br>`);
+    swap(num1, num2);
+  </script>
+</body>
+
+</html>
