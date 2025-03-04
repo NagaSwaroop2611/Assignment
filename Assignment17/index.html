@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function caseInterChange(input) {
+      let result = "";
+      for (let i = 0; i < input.length; i++) {
+        // let char=input[i];
+        let ascii = input.charCodeAt(i);
+        if (ascii >= 65 && ascii <= 91) {
+          result = result + String.fromCharCode(ascii + 32);
+        }
+        else {
+          result = result + String.fromCharCode(ascii - 32);
+        }
+      }
+      document.write(result);
+    }
+
+    let n = prompt("Enter the string:");
+    caseInterChange(n);
+  </script>
+</body>
+
+</html>
